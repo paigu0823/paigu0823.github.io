@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HP's Music Player</title>
+    <link rel="stylesheet" type="text/css" href="./css/audio.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="body" background="./img/bg0.png">
+    <div id="lyrics" class="lyrics"></div>
+    <div class="upper-container">
+      <!-- 唱片背景 -->
+      <div class="record-container">
+        <div class="record-bg">
+          <div id="record-img" class="rotate-play"></div>
+        </div>
+      </div>
+      <!-- 音乐介绍 -->
+      <div class="introduction-container">
+        <div class="text-container">
+          <div id="music-title">音乐</div>
+          <div class="author-container">
+            歌手：
+            <span id="author-name">未知</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 音乐播放器主要内容 -->
+    <div class="audio-box">
+      <div class="audio-container">
+        <audio id="audioTag"></audio>
+        <!-- 进度条 -->
+        <div class="a-progress">
+          <div class="pgs-total" id="progress-total">
+            <div class="pgs-play" id="progress" style="width: 0%"></div>
+          </div>
+        </div>
+        <!-- 下排控制按钮 -->
+        <div class="a-controls">
+          <!-- 播放时长 -->
+          <div class="time-container">
+            <span class="played-time" id="playedTime">00:00</span>&nbsp;/&nbsp;
+            <span class="audio-time" id="audioTime">00:00</span>
+          </div>
+          <!-- 中间按钮 -->
+          <div class="center-button-container">
+            <!-- 播放模式 -->
+            <div id="playMode" class="center-icon mode"></div>
+            <!-- 上一首 -->
+            <div id="skipForward" class="center-icon s-right"></div>
+            <!-- 暂停按钮 -->
+            <div id="playPause" class="icon-play"></div>
+            <!-- 下一首 -->
+            <div id="skipBackward" class="center-icon s-left"></div>
+            <!-- 音量调节 -->
+            <div id="volume" class="center-icon volume"></div>
+            <!-- 音量悬浮窗 -->
+            <input
+              type="range"
+              id="volumn-togger"
+              name="change"
+              value="70"
+              min="0"
+              max="100"
+              step="1"
+            />
+          </div>
+          <!-- 后部按钮 -->
+          <div class="bottom-button-container">
+            <!-- 列表 -->
+            <div id="list" class="bottom-icon list"></div>
+            <!-- 倍速 -->
+            <div id="speed" class="speed">1.0X</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 音乐列表 -->
+    <div class="close-list" id="close-list"></div>
+    <div class="music-list" id="music-list">
+      <div class="music-list-container">
+        <div class="music-list-title">播放队列</div>
+        <hr class="line" />
+        <div class="all-list">
+          <div id="music0">天后(盲目盲目Live版)</div>
+          <div id="music1">煎熬</div>
+          <div id="music2">大火</div>
+          <div id="music3">像天堂的悬崖</div>
+          <div id="music4">枫</div>
+          <div id="music5">泡沫</div>
+          <div id="music6">我怀念的</div>
+          <div id="music7">这世界那么多人</div>
+          <div id="music8">亲爱的，那不是爱情</div>
+          <div id="music9">画</div>
+          <div id="music10">下雨天</div>
+          <div id="music11">﹌﹌﹌﹌﹌﹌﹌﹌﹌</div>
+          <div id="music12">有一种悲伤</div>
+          <div id="music13">陪我长大</div>
+          <div id="music14">Woderful U</div>
+        </div>
+      </div>
+    </div>
+    <div id="hp-logo" class="hp-logo">HP's Music Player</div>
+    <script src="./js/audio.js"></script>
+  </body>
+</html>
